@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{this.setProductDetailModel.ProductName}}</ion-title>
+    <ion-buttons slot="end" style="padding-right: 10px;">
+      <ion-icon name="cart"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" scroll-y="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <img src="./assets/img/a1.jpg"  width="50%" />
+        <div>
+          <h3>{{this.setProductDetailModel.ProductName}}</h3>
+          <h4>รหัส : {{this.setProductDetailModel.ProductCode}}</h4>
+        </div>
+        <ion-item-divider style="margin-bottom: 20px;"></ion-item-divider>
+        <div style="float: left; padding: 5px; width: 50%; height: 50px;text-align: left;">
+          <span style="text-decoration: line-through ;"> ราคา {{this.setProductDetailModel.Discount}} บาท</span><br/>
+          <span style="font-size: 1.3em; color: crimson;">ราคา {{this.setProductDetailModel.Price}} บาท </span>
+        </div>
+        <div style="float: right; padding: 5px;width: 50%;height: 50px;text-align: center;">
+          <table style="width: 100%;font-size: 1.3em;">
+            <tr>
+              <td style="width: 30%;">จำนวน</td>
+              <td><ion-icon name="remove-circle" (click)="decreaseAmt(1)"></ion-icon></td>
+              <td style="background-color: #EAEAEA;">{{this.defaultAmount}}</td>
+              <td>
+                <div (click)="increaseAmt(1)">
+                  <ion-icon name="add-circle" ></ion-icon>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <ion-item-divider style="margin-bottom: 5px;"></ion-item-divider>
+        <div style="text-align: left;padding-bottom: 40px;">
+          {{this.setProductDetailModel.ProductDetail}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <div (click)="addToFavorite(1)" style="float: left;width: 50%; height: 100%; background-color: #F2A7BE;color:#FFF;line-height: 50px;"><ion-icon name="heart"></ion-icon> เพิ่มในสินค้าโปรด</div>
+    <div (click)="addToCart(1)" style="float: right;width: 50%;height: 100%; background-color: #16A5A3;color:#FFF;line-height: 50px;"><ion-icon name="cart"></ion-icon> เพิ่มลงตะกร้าสินค้า</div>
+  </ion-tab-bar>
+</ion-tabs>

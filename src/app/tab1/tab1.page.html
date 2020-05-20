@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Mono Product
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        หน้าแรก  > อาหารแมวสูตรเด็ด
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="./assets/img/a1.jpg" />
+          <ion-card-header>
+            <ion-card-title>อาหารแมวตราแมวแอบซุ่ม Meow Mix</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <div style="text-align: center;">
+              <ion-button color="primary"  (click)="viewProductDetail(1)">ดูรายละเอียด</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

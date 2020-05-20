@@ -1,0 +1,7 @@
+{
+  "name": "monoproduct",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
